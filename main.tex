@@ -1,0 +1,118 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{float}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{braket}
+
+\geometry{
+	top=0.6in, % Top margin
+	bottom=0.6in, % Bottom margin
+	left=0.75in, % Left margin
+	right=0.75in, % Right margin
+}
+
+\newcommand{\ua}{\ket{\uparrow}}
+\newcommand{\da}{\ket{\downarrow}}
+
+\title{Counterexamples}
+\author{Jan Engler}
+
+\begin{document}
+\maketitle
+
+\subsection{Measurable set that is not borel}
+\par Let $\mathcal{C}\subset [0,1]$ be Cantor set, $c\colon[0,1]\to[0,1]$ be cantor function defined by
+\begin{align*}
+	c &= \frac{1}{2} \text{ on } \left[\frac{1}{3},\frac{2}{3}\right] \\
+	c &= \frac{1}{4} \text{ on } \left[\frac{1}{9},\frac{2}{9}\right], \ c=\frac{3}{4} \text{ on } \left[\frac{7}{9},\frac{8}{9}\right] \\
+	  &\ \ \vdots \\
+	c\left(\sum_{n\in \mathbb{Z}}\frac{2a_n}{3^{n}}\right) &= \sum_{n\in \mathbb{Z}}\frac{a_n}{2^n} \ \ \forall \{a_n\}_{n\in \mathbb{N}}, \ a_n\in\{0,1\} \\
+	c(x) &= \sup_{y\leq x}c(y) \text{ for } x\in [0,1]\setminus \mathcal{C}
+\end{align*}
+Then $c$ is continuous, surjective and nondecreasing. Therefore
+\begin{equation*}
+  \psi(x) = c(x)+x
+\end{equation*}
+is continuous, increasing and bijective $[0,1]\to[0,2].$ Since
+\begin{align*}
+	[0,1]\setminus\mathcal{C} &= \bigcup_{n\in \mathbb{N}}(a_n,b_n) \text{ where } (a_n,b_n) \text{ are intervals} \\
+	\lambda\left(\psi\left(a_n,b_n\right)\right) &= \lambda(c(a_n)+a_n,c(b_n)+b_n)=\lambda(c|_{A_n}+a_n,c|_{A_n}+b_n)=\lambda(a_n,b_n) \\
+	\lambda(\psi([0,1]\setminus \mathcal{C}))&=\lambda([0,1]\setminus \mathcal{C})=1 \\
+	\lambda(\psi(\mathcal{C})) &= \lambda([])
+\end{align*}
+
+\newpage
+
+\subsection{Hopf fibration, dirac belt}
+
+\begin{equation*}
+	S^{1} \to S^{3} \cong B_{1,\mathbb{C}^2}(0) \to S^{2} \cong \mathbb{PC}^{1}
+\end{equation*}
+Hilbert space for two-state system is
+\begin{equation*}
+	\mathcal{H}=\mathbb{C}^2 = \mathbb{C}\ua \oplus \mathbb{C}\da
+\end{equation*}
+When we mod out the norm, we are left with $B_{1,\mathbb{C}^2}(0) \cong S^{3}$ and when we mod out the phase, we are left with $\frac{S^{3}}{S^{1}}\cong S^{2}.$ Quantum evolution happens on $S^{3}$ and state space is $S^{2}=\mathbb{P}(\mathcal{H}).$ 
+
+Below we use pauli matrices
+\begin{equation*}
+  \sigma_x =
+  \begin{pmatrix}
+	  0 & 1 \\ 1 & 0
+  \end{pmatrix}, \ \ 
+  \sigma_y = 
+  \begin{pmatrix}
+	  0 & -i \\ i & 0
+  \end{pmatrix}, \ \
+  \sigma_z = 
+  \begin{pmatrix}
+	  1 & 0 \\ 0 & -1
+  \end{pmatrix}
+\end{equation*}
+
+The Hopf fibration is the map which sends spinors (elements of $S^3$) to the expectation values of spin in the $x,y,z$ directions:
+\begin{align*}
+	S^3 &\to S^2 \\
+	\alpha\ua+\beta\da = \ket{\psi} &\mapsto \bra{\psi}\vec{\sigma}\ket{\psi} = 
+	\begin{pmatrix}
+\langle \sigma_x \rangle _{\psi} \\
+\langle \sigma_y \rangle _{\psi} \\
+\langle \sigma_x \rangle _{\psi} \\
+\end{pmatrix} \\
+\text{or: } 
+\begin{pmatrix}
+	\alpha \\
+	\beta
+\end{pmatrix}
+									&\mapsto 
+\begin{pmatrix}
+	\alpha \bar{\beta}+\beta \bar{\alpha} \\
+	i(\alpha \bar{\beta}-\beta \bar{\alpha}) \\
+	|\alpha|^2 - |\beta|^2
+\end{pmatrix}
+\end{align*}
+
+Generally, given a smooth manifold $M$, a principal $U(1)$-bundle is a fiber bundle $p\colon E\to M$ with a group action $U(1)\times E \to E$ such that $\forall e\in E, g\in G:\ e\in p^{-1}(x) \Rightarrow  g\cdot e \in p^{-1}(x)$ and the action on each fiber is free and transitive. In our case $M=S^{2}.$
+
+\newpage
+
+\subsection*{Examples of adjunctions}
+$Unif$ is category of uniform spaces and uniformly cts functions, $CUnif_{T2}$ is category of complete hausdorff uniform spaces, $\hat{A}$ is completion of $A$. 
+\begin{equation*}
+	Hom_{Unif}(A,Y) \cong Hom_{CUnif_{T2}}(\hat{A} ,Y)
+\end{equation*}
+
+\subsection*{Homeomorphism doesn't preserve completeness}
+Completeness is not a topological invariant. The spaces $(0,1), \mathbb{R}$ with Euclidean topology are homeomorphic via
+\begin{equation*}
+  h\colon \mathbb{R} \to (0,1), \ \ h(x) = \frac{\tanh(x)+1}{2}
+\end{equation*}
+$\mathbb{R}$ is complete, $(0,1)$ is not. 
+
+\end{document}
+
