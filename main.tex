@@ -86,6 +86,12 @@ so $c$ is not $AC[0,1].$ A shorter proof might use characterization $AC[0,1]=W^{
 \end{equation*}
 In fact, $c\in BV[0,1]\setminus AC[0,1]$ and it's Lebesque-Stieltjes measure is singular nonatomic with respect to the Lebesque measure on $[0,1].$ 
 
+\par On the other hand, the completion of Borel sigma algebra is easily seen to be Lebesque sigma algebra:
+\par Denote $\mathcal{B}$ Borel algebra, $\mathcal{L}$ Lebesque algebra, $\overline{\mathcal{B}}^\lambda$ the completion of $\mathcal{B}$ w.r.t. Lebesque measure $\lambda,$ $G_\delta$ to be set of countable intersections of open sets ("$G_\delta$" sets). Clearly $\overline{\mathcal{B}}^\lambda\subset \mathcal{L}.$ To prove the other inclusion, choose arbitrary $A\in \mathcal{L}.$ Then $\exists B\in G_\delta\colon A\subset B, \ \lambda(B\setminus A)=0,$ so
+\begin{equation*}
+	A = \underbrace{B}_{\in \mathcal{B}}\setminus \underbrace{(B\setminus A)}_{\in \overline{\mathcal{B}}^\lambda, \text{ since } \lambda(B\setminus A)=0}\in \overline{\mathcal{B}}^\lambda
+\end{equation*}
+
 \newpage
 
 \subsection{Hopf fibration, dirac belt}
