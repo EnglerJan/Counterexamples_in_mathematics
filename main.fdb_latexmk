@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1774111960.73044 "main.tex" "main.pdf" "main" 1774111961.00717 2
+["pdflatex"] 1776548600.72594 "main.tex" "main.pdf" "main" 1776548601.0185 2
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -68,8 +68,8 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1749856190 5523539 cbe340ff87ac4cfddcdc6361a84e52ac ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1749856343 3599578 419104296c7d9abb6113dce8a2050723 ""
   "/usr/local/texlive/2025/texmf.cnf" 1749856182.59286 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "main.aux" 1774111960.97741 422 526e952a4cb6648edaf9a0e9a772d1f4 "pdflatex"
-  "main.tex" 1774111960.56874 7096 f2b866642a9cf76ca6ea36f16b26543d ""
+  "main.aux" 1776548600.99111 422 526e952a4cb6648edaf9a0e9a772d1f4 "pdflatex"
+  "main.tex" 1776548600.41811 9164 c7f470609d6819eb1c627441fda72988 ""
   (generated)
   "main.aux"
   "main.log"
