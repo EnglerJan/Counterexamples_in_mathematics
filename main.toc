@@ -1,0 +1,8 @@
+\contentsline {subsection}{\numberline {0.1}Measurable set that is not borel}{1}{}%
+\contentsline {subsection}{\numberline {0.2}Hölder continuous function not absolutely continuous}{2}{}%
+\contentsline {subsection}{\numberline {0.3}Hopf fibration, dirac belt}{3}{}%
+\contentsline {subsection}{\numberline {0.4}Examples of adjunctions}{4}{}%
+\contentsline {subsection}{\numberline {0.5}Homeomorphism doesn't preserve completeness}{4}{}%
+\contentsline {subsection}{\numberline {0.6}Frechet space that is not normable}{4}{}%
+\contentsline {subsection}{\numberline {0.7}Banach space with no preduals}{4}{}%
+\contentsline {subsection}{\numberline {0.8}Fourier series of continuous function does not converge}{5}{}%
