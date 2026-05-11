@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.14)  10 MAY 2026 13:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.5.10)  11 MAY 2026 23:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-05-26>
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/size12.clo
@@ -52,7 +52,7 @@ Package caption Info: Standard document class detected.
 \c@continuedfloat=\count285
 Package caption Info: float package is loaded.
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2025/05/18 v2.17x AMS math features
+Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
@@ -113,8 +113,8 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \multlinegap=\skip52
 \multlinetaggap=\skip53
 \mathdisplay@stack=\toks24
-LaTeX Info: Redefining \[ on input line 2949.
-LaTeX Info: Redefining \] on input line 2950.
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
@@ -135,7 +135,7 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen166
 \Gin@req@width=\dimen167
@@ -175,7 +175,7 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layoutvoffset=\dimen175
 \Gm@dimlist=\toks25
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/braket/braket.sty) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-04-14 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count301
 ) (./main.aux)
 \openout1 = `main.aux'.
@@ -256,11 +256,10 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./main.toc)
+)
+No file main.toc.
 \tf@toc=\write3
 \openout3 = `main.toc'.
-
-
 
 [1
 
@@ -293,33 +292,402 @@ l.70 	\item $
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+[2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [3] [4]
+
+LaTeX Warning: Reference `fourier bad' on page 5 undefined on input line 228.
 
 
-[2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+LaTeX Warning: Reference `fourier bad' on page 5 undefined on input line 228.
 
-[3]
+[5] [6]
+./main.tex:329: Undefined control sequence.
+l.329     \mathbb{T} = -p\mathds
+                                {1} + \eta(\nabla\vec{w}+\nabla\vec{w}^T) \r...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-[4]
+./main.tex:341: Undefined control sequence.
+l.341 \Delta \vec{w}=\nabla\div\vec{w}-\rot
+                                           (\rot\vec{w})=-\rot(\rot \vec{w}),
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-[5] (./main.aux)
+./main.tex:341: Undefined control sequence.
+l.341 \Delta \vec{w}=\nabla\div\vec{w}-\rot(\rot
+                                                \vec{w})=-\rot(\rot \vec{w}),
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:341: Undefined control sequence.
+l.341 ...\nabla\div\vec{w}-\rot(\rot\vec{w})=-\rot
+                                                  (\rot \vec{w}),
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:341: Undefined control sequence.
+l.341 ...a\div\vec{w}-\rot(\rot\vec{w})=-\rot(\rot
+                                                   \vec{w}),
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:345: Undefined control sequence.
+l.345     -\rot
+               (\rot \vec{w}) = \nabla p
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:345: Undefined control sequence.
+l.345     -\rot(\rot
+                     \vec{w}) = \nabla p
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:350: Undefined control sequence.
+<argument>  (\rot 
+                  \vec {w})_r = \frac {-1}{h_\theta h_\varphi }\left ((h_\th...
+l.350 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:350: Undefined control sequence.
+<argument> ...\theta }\right ) &= 0 = ... = (\rot 
+                                                  \vec {w})_\theta \\ (\rot ...
+l.350 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:350: Undefined control sequence.
+<argument> .... = (\rot \vec {w})_\theta \\ (\rot 
+                                                  \vec {w})_{,\varphi } = \f...
+l.350 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:350: Undefined control sequence.
+<argument>  (\rot 
+                  \vec {w})_r = \frac {-1}{h_\theta h_\varphi }\left ((h_\th...
+l.350 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:350: Undefined control sequence.
+<argument> ...\theta }\right ) &= 0 = ... = (\rot 
+                                                  \vec {w})_\theta \\ (\rot ...
+l.350 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:350: Undefined control sequence.
+<argument> .... = (\rot \vec {w})_\theta \\ (\rot 
+                                                  \vec {w})_{,\varphi } = \f...
+l.350 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:359: Undefined control sequence.
+<argument>  (\rot 
+                  (\rot \vec {w}))_r &= \frac {1}{h_{\theta }h_{\varphi }}\l...
+l.359 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:359: Undefined control sequence.
+<argument>  (\rot (\rot 
+                        \vec {w}))_r &= \frac {1}{h_{\theta }h_{\varphi }}\l...
+l.359 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:359: Undefined control sequence.
+<argument> ...h_{\varphi }}\left (h_\varphi (\rot 
+                                                  \vec {w})_\varphi )\right ...
+l.359 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:359: Undefined control sequence.
+<argument> ...theta }(Q\psi )_{,\theta } \\ (\rot 
+                                                  (\rot \vec {w}))_\theta &=...
+l.359 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:359: Undefined control sequence.
+<argument> ...}(Q\psi )_{,\theta } \\ (\rot (\rot 
+                                                  \vec {w}))_\theta &= \frac...
+l.359 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:359: Undefined control sequence.
+<argument> ..._{\varphi }}\left (-h_\varphi (\rot 
+                                                  \vec {w})_\varphi )\right ...
+l.359 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:359: Undefined control sequence.
+<argument>  (\rot 
+                  (\rot \vec {w}))_r &= \frac {1}{h_{\theta }h_{\varphi }}\l...
+l.359 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:359: Undefined control sequence.
+<argument>  (\rot (\rot 
+                        \vec {w}))_r &= \frac {1}{h_{\theta }h_{\varphi }}\l...
+l.359 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:359: Undefined control sequence.
+<argument> ...h_{\varphi }}\left (h_\varphi (\rot 
+                                                  \vec {w})_\varphi )\right ...
+l.359 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:359: Undefined control sequence.
+<argument> ...theta }(Q\psi )_{,\theta } \\ (\rot 
+                                                  (\rot \vec {w}))_\theta &=...
+l.359 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:359: Undefined control sequence.
+<argument> ...}(Q\psi )_{,\theta } \\ (\rot (\rot 
+                                                  \vec {w}))_\theta &= \frac...
+l.359 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:359: Undefined control sequence.
+<argument> ..._{\varphi }}\left (-h_\varphi (\rot 
+                                                  \vec {w})_\varphi )\right ...
+l.359 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:360: Undefined control sequence.
+l.360 rovnice $-\rot
+                    (\rot \vec{w}) = \nabla p$ tedy přechází na
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:360: Undefined control sequence.
+l.360 rovnice $-\rot(\rot
+                          \vec{w}) = \nabla p$ tedy přechází na
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[7] [8]
+<./images/kuzel4.png, id=44, 737.75626pt x 298.86656pt>
+File: ./images/kuzel4.png Graphic file (type png)
+<use ./images/kuzel4.png>
+Package pdftex.def Info: ./images/kuzel4.png  used on input line 427.
+(pdftex.def)             Requested size: 368.87723pt x 149.4329pt.
+<./images/kuzel5.png, id=46, 344.78813pt x 297.36093pt>
+File: ./images/kuzel5.png Graphic file (type png)
+<use ./images/kuzel5.png>
+Package pdftex.def Info: ./images/kuzel5.png  used on input line 437.
+(pdftex.def)             Requested size: 172.39363pt x 148.6801pt.
+
+./main.tex:452: Undefined control sequence.
+<argument> 3: \uv 
+                  {normálová derivace objemu}
+l.452 ...ion*{3: \uv{normálová derivace objemu}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:453: Undefined control sequence.
+l.453 ...u normály (=kolmici k ploše), nové \uv
+                                                  {nafouklé} těleso bude m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[9 <./images/kuzel4.png> <./images/kuzel5.png>]
+./main.tex:460: Undefined control sequence.
+l.460 \par \textbf{Poznámka:} \uv
+                                  {o} notace tady znamená, že $o(\Delta d)...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./main.tex:479: Undefined control sequence.
+l.479 ...�ku o $\Delta H$ tak, aby měl kužel \uv
+                                                  {stejný tvar}, tj. aby od...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<./images/kuzel6.png, id=52, 770.88pt x 395.22656pt>
+File: ./images/kuzel6.png Graphic file (type png)
+<use ./images/kuzel6.png>
+Package pdftex.def Info: ./images/kuzel6.png  used on input line 485.
+(pdftex.def)             Requested size: 385.43906pt x 197.6128pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+./main.tex:493: Undefined control sequence.
+l.493 ...\Delta H, (\Delta H)^2$ (vše, kde je \uv
+                                                  {víc než jedna delta.})
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[10]
+./main.tex:515: Undefined control sequence.
+l.515 ...li nově vzniklou plochu u podstavy a \uv
+                                                  {v čepičce}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<./images/kuzel7.png, id=56, 650.43pt x 324.46219pt>
+File: ./images/kuzel7.png Graphic file (type png)
+<use ./images/kuzel7.png>
+Package pdftex.def Info: ./images/kuzel7.png  used on input line 519.
+(pdftex.def)             Requested size: 325.2142pt x 162.23068pt.
+[11 <./images/kuzel6.png> <./images/kuzel7.png>] (./main.aux)
  ***********
-LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-05-26>
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 5062 strings out of 467886
- 79651 string characters out of 5434045
- 490664 words of memory out of 5000000
- 33582 multiletter control sequences out of 15000+600000
- 635618 words of font info for 74 fonts, out of 8000000 for 9000
+ 5112 strings out of 467533
+ 80695 string characters out of 5419495
+ 504792 words of memory out of 5000000
+ 33986 multiletter control sequences out of 15000+600000
+ 637168 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,15n,65p,489b,215s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (5 pages, 187140 bytes).
+ 57i,15n,65p,525b,259s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (11 pages, 309153 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 130 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
