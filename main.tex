@@ -30,7 +30,7 @@
 \maketitle
 \tableofcontents
 
-\subsection{Measurable set that is not borel}
+\subsection{Lebesque-measurable set that is not Borel}
 \par Let $\mathcal{C}\subset [0,1]$ be Cantor set, $c\colon[0,1]\to[0,1]$ be cantor function defined by
 \begin{align*}
 	c &= \frac{1}{2} \text{ on } \left[\frac{1}{3},\frac{2}{3}\right] \\
@@ -45,11 +45,18 @@ Then $c$ is continuous, surjective and nondecreasing. Therefore
 \end{equation*}
 is continuous, increasing and bijective $[0,1]\to[0,2].$ Since
 \begin{align*}
-	[0,1]\setminus\mathcal{C} &= \bigcup_{n\in \mathbb{N}}(a_n,b_n) \text{ where } (a_n,b_n) \text{ are intervals} \\
+	[0,1]\setminus\mathcal{C} &= \bigcup_{n\in \mathbb{N}}(a_n,b_n) \text{ where } (a_n,b_n) \text{ are intervals over which } c(x) \text{ is constant} \\
 	\lambda\left(\psi\left(a_n,b_n\right)\right) &= \lambda(c(a_n)+a_n,c(b_n)+b_n)=\lambda(c|_{A_n}+a_n,c|_{A_n}+b_n)=\lambda(a_n,b_n) \\
-	\lambda(\psi([0,1]\setminus \mathcal{C}))&=\lambda([0,1]\setminus \mathcal{C})=1 \\
-	\lambda(\psi(\mathcal{C})) &= \lambda([])
+	\Rightarrow \lambda(\psi([0,1]\setminus \mathcal{C}))&=\lambda([0,1]\setminus \mathcal{C})=1 \\
+	\Rightarrow \lambda(\psi(\mathcal{C})) &= \lambda([0,2]\setminus \psi([0,1]\setminus \mathcal{C}))=1
 \end{align*}
+By Vitali's theorem, any Lebesque-measurable set of positive measure has a non-measurable subset. Denote $N\subset \psi(\mathcal{C})$ such a non-measurable subset. Then $\psi^{-1}(N)\subset \mathcal{C}$ is Lebesque-measurable since $\lambda(\mathcal{C})=0.$ But $\psi^{-1}$ is increasing, therefore Borel, so if $\psi^{-1}(N)$ was Borel-measurable, also
+\begin{equation*}
+  N = (\psi^{-1})^{-1}(\psi^{-1}(N))
+\end{equation*}
+would be, contradiction. Therefore $\psi^{-1}(N)$ is Lebesque-measurable but not Borel-measurable.
+
+\vspace{.3cm} 
 \par On the other hand, the completion of Borel sigma algebra is easily seen to be Lebesque sigma algebra:
 \par Denote $\mathcal{B}$ Borel algebra, $\mathcal{L}$ Lebesque algebra, $\overline{\mathcal{B}}^\lambda$ the completion of $\mathcal{B}$ w.r.t. Lebesque measure $\lambda,$ $G_\delta$ to be set of countable intersections of open sets ("$G_\delta$" sets). Clearly $\overline{\mathcal{B}}^\lambda\subset \mathcal{L}.$ To prove the other inclusion, choose arbitrary $A\in \mathcal{L}.$ Then $\exists B\in G_\delta\colon A\subset B, \ \lambda(B\setminus A)=0,$ so
 \begin{equation*}
@@ -88,7 +95,8 @@ Since c is constant on big set, and $c(0)=0, c(1)=1,$ it must grow fast on a sma
 	|x_1-0| + \sum_{k=1}^{n-1} |x_{k+1}-y_{k}| + |1-y_n| = 1-\sum_{k=1}^n |y_k-x_k| &< \epsilon \\
 	\text{BUT} \ \ c(x_1)-c(0) + \sum_{k=1}^{n-1}(c(x_{k+1})-c(y_k))+c(1)-c(y_n) = 1-\sum_{k=1}^n(c(y_k)-c(x_k))&=1 
 \end{align*}
-so $c$ is not $AC[0,1].$ A shorter proof might use characterization $AC[0,1]=W^{1,1}(0,1),$ since $c$ has classical derivative zero almost everywhere, but certainly
+so $c$ is not $AC[0,1].$ 
+\par A shorter proof might use characterization $AC[0,1]=W^{1,1}(0,1),$ since $c$ has classical derivative zero almost everywhere, but certainly
 \begin{equation*}
 	c(0)+\int_{0}^1 c'(x)dx = 0+\int_{0}^1 0\ dx = 0 \neq c(1)
 \end{equation*}
@@ -194,6 +202,18 @@ Suppose $X^{*}=L^1(0,1).$ Then by Banach-Alaoglu, $B_X = \{f\in L^1(0,1)\colon \
 \end{equation*}
 Now $g_1 := 2f\chi_{( 0,s )}, \ g_2 := 2f\chi_{(s,1)}$ satisfy $f=\displaystyle\frac{g_1+g_2}{2}, \  g_1,g_2\in B_X, \ g_1, g_2\neq f.$ 
 
+\subsection{Weak convergence $\neq$ weak$^*$ convergence}
+Let $X=c_0, \ X^{*}=l^{1}, X^{**}=l^{\infty}.$ Then the Shauder basis
+\begin{equation*}
+	e_n = (0, 0, ..., 0, \underbrace{1}_{n\text{'th position}}, 0, ...)
+\end{equation*}
+satisfies
+\begin{align*}
+	&\forall x\in c_0, \langle e_n, x\rangle \to 0\\
+	&\text{For}\ y=( (-1)^{n})_{n=1}^{\infty}\in l^{\infty}, \langle y, e_n\rangle =(-1)^{n} \not\to 0\\
+\end{align*}
+So $e_n \stackrel{w^{*}}{\to} 0$ but $e_n\stackrel{w}{\not\to} 0.$
+
 \subsection{Fourier series of continuous function does not converge}.
 Let for $f\colon [0,2\pi]\to \mathbb{R}$
 \begin{equation*}
@@ -221,7 +241,7 @@ But
 \begin{equation*}
   \frac{1}{2\pi}\int_0^{2\pi}|D_N(s)|dt \geq \frac{1}{2\pi}\int_0^{2\pi} \frac{\sin\left(\frac{2N+1}{2}s\right)}{\frac{s}{2}}ds \to \infty
 \end{equation*}
-Therefore $\{\Phi_{x,N}\}_{N\in \mathbb{N}}$ is not bounded in $(C[0,2\pi])^{*}.$ Using uniform boundedness principle (and that $x$ was arbitrary) we get 
+Therefore $\{\Phi_{x,N}\}_{N\in \mathbb{N}}$ is not bounded in $(C[0,2\pi])^{*}.$ Using Uniform boundedness principle (and that $x$ was arbitrary) we get 
 \begin{equation}\label{fourier bad}
 	\forall x\in [0,2\pi] \ \exists f\in C[0,2\pi]\colon S_Nf(x) \ \text{ diverges as } \ N\to \infty 
 \end{equation}
@@ -229,6 +249,57 @@ It gets worse. Denote $\mathcal{P}\subset L^{1}(0,2\pi)$ the set of trigonometri
 
 \begin{equation*}
 	\forall x\in [0,2\pi] \ \exists \mathcal{D}\subset C[0,2\pi]\text{ dense such that }\forall f\in \mathcal{D}\colon S_Nf(x) \ \text{ diverges as } \ N\to \infty 
+\end{equation*}
+
+\subsection{Functional not attaining it's norm. Counterexample to projection theorem}
+Let $X=L^{1}(0,1),\ \phi\in X^{*}$ defined by $\langle\phi,f\rangle:= \int_0^1 xf(x)dx.$ We will show
+\begin{equation*}
+	\nexists f\in X\colon \nm{f}_X=1, \ |\langle \phi, f\rangle|=\nm{\phi}_{X^{*}}.
+\end{equation*}
+Clearly 
+\begin{equation*}
+  \nm{\phi}_{(L^{1}(0,1))^{*}}=\nm{x}_{L^{\infty}(0,1)}=1. 
+\end{equation*}
+For contradiction, suppose there exist $f\in L^{1}(0,1)$ such that $\nm{f}_1=1$, $|\langle \phi, f\rangle|=1.$ Then $f$ does not change sign on $(0,1)$ so we can choose $f$ such that $f\geq 0$ on $(0,1)$ (if not, then $\nm{|f|}_{L^{1}(0,1)}=\nm{f}_{L^{1}(0,1)}=1, \ |\langle \phi, |f|\rangle|>|\langle \phi, f\rangle|=1,$ contradicting $\nm{\phi}_{(L^{1})^{*}}=1$). Then
+\begin{align*}
+1
+&= \int_0^{1-\frac{1}{n}}xf(x)\,dx+\int_{1-\frac{1}{n}}^1xf(x)\,dx \leq \\
+&\leq \left(1-\frac{1}{n}\right)\int_0^{1-\frac{1}{n}}f(x)\,dx + \int_{1-\frac{1}{n}}^1f(x)\,dx \\
+&= \left(1-\frac{1}{n}\right)\underbrace{\int_0^1f(x)\,dx}_{=1}
++ \frac{1}{n}\int_{1-\frac{1}{n}}^1f(x)\,dx
+\end{align*}
+\vspace{-.8cm}
+\begin{alignat*}{2}
+&\Rightarrow \quad &\int_{1-\frac{1}{n}}^1 f(x)\,dx &\ge 1 \qquad \forall n\in\mathbb N \\
+& & &\ \big\downarrow \; n\to\infty \quad (f\in L^{1})& & \\
+& & 0 &\ge 1.
+\end{alignat*}
+Intuitively, any $f$ attaining the bound $|\langle \phi, f\rangle|=1$ would have to have all it's mass at $x=1,$ since if the mass is anywhere else, we can move it closer to $x=1$ to make $\langle \phi,f\rangle$ bigger. This is impossible on the level of $L^{1}$ functions. However, taking $\delta_1 \in (C[0,1])^{*}, \ \langle\delta_1,\varphi \rangle=\varphi(1),$ by Hahn-Banach
+\begin{equation*}
+	\nm{\delta_1}_{(C[0,1])^{*}}=1, \ C[0,1]<L^{\infty}(0,1) \Rightarrow \exists T\in (L^{\infty}(0,1))^{*}\colon T\rvert_{C[0,1]}=\delta_1, \nm{T}_{(L^{\infty}(0,1))^{*}}=1.
+\end{equation*}
+And (equating $\phi\in (L^{1})^{*}$ with $x\in L^{\infty}$):
+\begin{equation*}
+  \langle T, \phi \rangle = \langle T, x \rangle = \langle \delta_1, x \rangle=1.
+\end{equation*}
+Therefore $\phi$ attains it's maximum on the unit ball of dual $(L^{\infty})^{*}$, but not on predual $L^{1}$. The problem is lack of reflexivity. By James' theorem, for any Banach space $Y$
+\begin{center}
+  $Y$ is reflexive $\iff$ any $\phi\in Y^{*}$ attains it's norm on the unit ball $B_1(0)\subset Y.$
+\end{center}
+We say that a subspace $A\subset Y$ of Banach space is \textit{proximital}, if
+\begin{equation*}
+	\forall x\in Y \ \exists! a\in A\colon \nm{x-a}=\inf_{b\in A}\nm{x-b} \ \ \ \hdots a:=P_A(x)
+\end{equation*}
+by the Projection theorem, every nonempty closed convex subset of a Hilbert space is proximital. We show that in $X=L^{1}$, $V:=\{f\in L^{1}(0,1)\colon \langle \phi, f\rangle=1\}$ is not proximital, even though it is a closed convex subset. We wish to project $0\in L^{1}$ to $V.$ Clearly
+\begin{equation*}
+	\forall \epsilon>0\ \exists f_\epsilon\in L^{1}\colon \nm{f_\epsilon}_{L^{1}}\leq 1+\epsilon , \ \langle \phi, f_\epsilon\rangle=1 \ \ \ \&\ \ \ \forall f\in L^{1}\colon \langle \phi, f\rangle=1 \Rightarrow \nm{f}_{L^{1}}\geq 1
+\end{equation*}
+\begin{equation*}
+	\Rightarrow  \inf_{f\in V}\nm{0-f} = \inf_{f\in V}\nm{f} = 1
+\end{equation*}
+But we know that this bound cannot be attained, so the projection does not exist:
+\begin{equation*}
+	f= P_V(0)\ \Rightarrow \ \nm{f}_{L^{1}}=1\ \ \& \ \ f\in V, \ \ \ \text{a contradiction.}
 \end{equation*}
 
 \subsection{Vitali covering lemma}
