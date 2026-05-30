@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{geometry}
 \usepackage{braket}
+\usepackage{bbold}
 
 \geometry{
 	top=0.6in, % Top margin
@@ -30,6 +31,7 @@
 \maketitle
 \tableofcontents
 
+\section{Everything}
 \subsection{Lebesque-measurable set that is not Borel}
 \par Let $\mathcal{C}\subset [0,1]$ be Cantor set, $c\colon[0,1]\to[0,1]$ be cantor function defined by
 \begin{align*}
@@ -40,9 +42,9 @@
 	c(x) &= \sup_{y\leq x}c(y) \text{ for } x\in [0,1]\setminus \mathcal{C}
 \end{align*}
 Then $c$ is continuous, surjective and nondecreasing. Therefore
-\begin{equation*}
-  \psi(x) = c(x)+x
-\end{equation*}
+\begin{equation}\label{cantor+x}
+  \psi(x) := c(x)+x
+\end{equation}
 is continuous, increasing and bijective $[0,1]\to[0,2].$ Since
 \begin{align*}
 	[0,1]\setminus\mathcal{C} &= \bigcup_{n\in \mathbb{N}}(a_n,b_n) \text{ where } (a_n,b_n) \text{ are intervals over which } c(x) \text{ is constant} \\
@@ -50,12 +52,18 @@ is continuous, increasing and bijective $[0,1]\to[0,2].$ Since
 	\Rightarrow \lambda(\psi([0,1]\setminus \mathcal{C}))&=\lambda([0,1]\setminus \mathcal{C})=1 \\
 	\Rightarrow \lambda(\psi(\mathcal{C})) &= \lambda([0,2]\setminus \psi([0,1]\setminus \mathcal{C}))=1
 \end{align*}
-By Vitali's theorem, any Lebesque-measurable set of positive measure has a non-measurable subset. Denote $N\subset \psi(\mathcal{C})$ such a non-measurable subset. Then $\psi^{-1}(N)\subset \mathcal{C}$ is Lebesque-measurable since $\lambda(\mathcal{C})=0.$ But $\psi^{-1}$ is increasing, therefore Borel, so if $\psi^{-1}(N)$ was Borel-measurable, also
+By Vitali's theorem, any Lebesque-measurable set of positive measure has a non-measurable subset. Denote 
+\begin{equation}\label{nonmeasurable set}
+  N\subset \psi(\mathcal{C})
+\end{equation} such a non-measurable subset. Then $\psi^{-1}(N)\subset \mathcal{C}$ is Lebesque-measurable since $\lambda(\mathcal{C})=0.$ But $\psi^{-1}$ is increasing, therefore Borel, so if 
+\begin{equation}\label{nonborel measurable set}
+  A:= \psi^{-1}(N) 
+\end{equation}
+was Borel-measurable, also
 \begin{equation*}
-  N = (\psi^{-1})^{-1}(\psi^{-1}(N))
+  N = (\psi^{-1})^{-1}(A)
 \end{equation*}
-would be, contradiction. Therefore $\psi^{-1}(N)$ is Lebesque-measurable but not Borel-measurable.
-
+would be, contradiction. Therefore $A$ is Lebesque-measurable but not Borel-measurable.
 \vspace{.3cm} 
 \par On the other hand, the completion of Borel sigma algebra is easily seen to be Lebesque sigma algebra:
 \par Denote $\mathcal{B}$ Borel algebra, $\mathcal{L}$ Lebesque algebra, $\overline{\mathcal{B}}^\lambda$ the completion of $\mathcal{B}$ w.r.t. Lebesque measure $\lambda,$ $G_\delta$ to be set of countable intersections of open sets ("$G_\delta$" sets). Clearly $\overline{\mathcal{B}}^\lambda\subset \mathcal{L}.$ To prove the other inclusion, choose arbitrary $A\in \mathcal{L}.$ Then $\exists B\in G_\delta\colon A\subset B, \ \lambda(B\setminus A)=0,$ so
@@ -63,6 +71,13 @@ would be, contradiction. Therefore $\psi^{-1}(N)$ is Lebesque-measurable but not
 	A = \underbrace{B}_{\in \mathcal{B}}\setminus \underbrace{(B\setminus A)}_{\in \overline{\mathcal{B}}^\lambda, \text{ since } \lambda(B\setminus A)=0}\in \overline{\mathcal{B}}^\lambda
 \end{equation*}
 
+\subsection{Composition of Lebesque measurable functions is not Lebesque measurable}
+By definition, $f\colon \mathbb{R}\to \mathbb{R}$ is Lebesque measurable if it is measurable as a map $(\mathbb{R},\mathcal{L})\to (\mathbb{R}, \mathcal{B}).$ Let $\psi\colon [0,1]\to [0,2]$ be as in (\ref{cantor+x}), then since $[0,1]$ is compact $\psi^{-1}$ is also continuous (therefore Lebesque measurable). Denote $A\subset[0,1]$ a non-Borel set from (\ref{nonborel measurable set}), then since $\lambda(A)=0,\ \mathbb{1}_A\colon [0,1]\to \mathbb{R}$ is Lebesque measurable. But
+\begin{equation*}
+	(\mathbb{1}_A\circ \psi^{-1})^{-1}(\{1\})=(\psi^{-1})^{-1}(A)=N
+\end{equation*}
+is the non-measurable set from (\ref{nonmeasurable set}), therefore $\mathbb{1}_A\circ \psi^{-1}$ is not measurable.
+\par Meaning: this is why we define Carathéodory functions.
 
 \subsection{Hölder continuous function not absolutely continuous}
 Let $c$ be the cantor function and $c_k$ be defined by
@@ -73,7 +88,7 @@ Let $c$ be the cantor function and $c_k$ be defined by
 \end{align*}
 Then 
 \begin{itemize}
-	\item \nm{c-c_k}_{\infty} = 2^{-k}
+	\item $\nm{c-c_k}_{\infty} = 2^{-k}$
 	\item $c_k$ is Lipschitz with constant $\displaystyle\left(\frac{3}{2}\right)^k$ (think about the slope of steepest line)
 \end{itemize}
 So for $x,y \in [0,1]$
@@ -271,12 +286,12 @@ For contradiction, suppose there exist $f\in L^{1}(0,1)$ such that $\nm{f}_1=1$,
 \vspace{-.8cm}
 \begin{alignat*}{2}
 &\Rightarrow \quad &\int_{1-\frac{1}{n}}^1 f(x)\,dx &\ge 1 \qquad \forall n\in\mathbb N \\
-& & &\ \big\downarrow \; n\to\infty \quad (f\in L^{1})& & \\
+& & &\ \big\downarrow \; n\to\infty \quad (f\in L^{1}) \\
 & & 0 &\ge 1.
 \end{alignat*}
 Intuitively, any $f$ attaining the bound $|\langle \phi, f\rangle|=1$ would have to have all it's mass at $x=1,$ since if the mass is anywhere else, we can move it closer to $x=1$ to make $\langle \phi,f\rangle$ bigger. This is impossible on the level of $L^{1}$ functions. However, taking $\delta_1 \in (C[0,1])^{*}, \ \langle\delta_1,\varphi \rangle=\varphi(1),$ by Hahn-Banach
 \begin{equation*}
-	\nm{\delta_1}_{(C[0,1])^{*}}=1, \ C[0,1]<L^{\infty}(0,1) \Rightarrow \exists T\in (L^{\infty}(0,1))^{*}\colon T\rvert_{C[0,1]}=\delta_1, \nm{T}_{(L^{\infty}(0,1))^{*}}=1.
+	\nm{\delta_1}_{(C[0,1])^{*}}=1, \ C[0,1]<L^{\infty}(0,1) \Rightarrow \exists T\in (L^{\infty}(0,1))^{*}\colon T\rvert_{C[0,1]}=\delta_1, \ \nm{T}_{(L^{\infty}(0,1))^{*}}=1.
 \end{equation*}
 And (equating $\phi\in (L^{1})^{*}$ with $x\in L^{\infty}$):
 \begin{equation*}
@@ -496,7 +511,7 @@ a z podmínky $\vec{w}|_{\partial K}=0$ plyne
 \begin{figure}[h]
     \centering
     \includegraphics[scale=.5]{./images/kuzel4.png}
-    \label{fig:enter-label}
+    \label{nevim?}
 \end{figure}
 Trojúhelníček má stranu $d$ v podstavě válce. Když si domyslíme kruh o poloměru $R,$ do kterého je vepsaný pravidelný $n$-úhelník (=podstava jehlanu), úsečka $d$ je sečna tohoto kruhu a odpovídá jí úhel $\alpha.$ Takových úseček se tam má vlézt $n$, proto $\alpha = \frac{2\pi}{n}.$ Z trojúhelníčku $R,l,\frac{d}{2}$ máme
 \begin{equation*}
@@ -588,7 +603,7 @@ Konečně tedy
 \begin{figure}[h]
     \centering
     \includegraphics[scale=.5]{./images/kuzel7.png}
-    \label{fig:enter-label}
+    \label{nevim!}
 \end{figure}
 Jde ale vidět, že zanedbané části jsou řádově $\Delta d \cdot \Delta H,$ resp. $\Delta d \cdot \Delta R,$ tedy typu $o(\Delta R)$ a konečný výsledek neovlivní.
 

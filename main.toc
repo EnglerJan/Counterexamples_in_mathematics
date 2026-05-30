@@ -1,13 +1,15 @@
-\contentsline {subsection}{\numberline {0.1}Lebesque-measurable set that is not Borel}{1}{}%
-\contentsline {subsection}{\numberline {0.2}Hölder continuous function not absolutely continuous}{2}{}%
-\contentsline {subsection}{\numberline {0.3}Hopf fibration, dirac belt}{3}{}%
-\contentsline {subsection}{\numberline {0.4}Examples of adjunctions}{3}{}%
-\contentsline {subsection}{\numberline {0.5}Homeomorphism doesn't preserve completeness}{4}{}%
-\contentsline {subsection}{\numberline {0.6}Frechet space that is not normable}{4}{}%
-\contentsline {subsection}{\numberline {0.7}Banach space with no preduals}{4}{}%
-\contentsline {subsection}{\numberline {0.8}Weak convergence $\neq $ weak$^*$ convergence}{4}{}%
-\contentsline {subsection}{\numberline {0.9}Fourier series of continuous function does not converge}{5}{}%
-\contentsline {subsection}{\numberline {0.10}Functional not attaining it's norm. Counterexample to projection theorem}{6}{}%
-\contentsline {subsection}{\numberline {0.11}Vitali covering lemma}{7}{}%
-\contentsline {subsection}{\numberline {0.12}Stokes}{8}{}%
-\contentsline {subsection}{\numberline {0.13}Kuzel}{10}{}%
+\contentsline {section}{\numberline {1}Everything}{1}{}%
+\contentsline {subsection}{\numberline {1.1}Lebesque-measurable set that is not Borel}{1}{}%
+\contentsline {subsection}{\numberline {1.2}Composition of Lebesque measurable functions is not Lebesque measurable}{2}{}%
+\contentsline {subsection}{\numberline {1.3}Hölder continuous function not absolutely continuous}{2}{}%
+\contentsline {subsection}{\numberline {1.4}Hopf fibration, dirac belt}{3}{}%
+\contentsline {subsection}{\numberline {1.5}Examples of adjunctions}{4}{}%
+\contentsline {subsection}{\numberline {1.6}Homeomorphism doesn't preserve completeness}{4}{}%
+\contentsline {subsection}{\numberline {1.7}Frechet space that is not normable}{4}{}%
+\contentsline {subsection}{\numberline {1.8}Banach space with no preduals}{5}{}%
+\contentsline {subsection}{\numberline {1.9}Weak convergence $\neq $ weak$^*$ convergence}{5}{}%
+\contentsline {subsection}{\numberline {1.10}Fourier series of continuous function does not converge}{5}{}%
+\contentsline {subsection}{\numberline {1.11}Functional not attaining it's norm. Counterexample to projection theorem}{6}{}%
+\contentsline {subsection}{\numberline {1.12}Vitali covering lemma}{7}{}%
+\contentsline {subsection}{\numberline {1.13}Stokes}{8}{}%
+\contentsline {subsection}{\numberline {1.14}Kuzel}{10}{}%
