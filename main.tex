@@ -21,7 +21,7 @@
 \newcommand{\ua}{\ket{\uparrow}}
 \newcommand{\da}{\ket{\downarrow}}
 \newcommand\nm[1]{\lVert #1 \rVert}
-
+\renewcommand\:{\colon}
 
 \title{Tricky stuff}
 \author{Jan Engler}
@@ -33,7 +33,7 @@
 
 \section{Everything}
 \subsection{Lebesque-measurable set that is not Borel}
-\par Let $\mathcal{C}\subset [0,1]$ be Cantor set, $c\colon[0,1]\to[0,1]$ be cantor function defined by
+\par Let $\mathcal{C}\subset [0,1]$ be Cantor set, $c\:[0,1]\to[0,1]$ be cantor function defined by
 \begin{align*}
 	c &= \frac{1}{2} \text{ on } \left[\frac{1}{3},\frac{2}{3}\right] \\
 	c &= \frac{1}{4} \text{ on } \left[\frac{1}{9},\frac{2}{9}\right], \ c=\frac{3}{4} \text{ on } \left[\frac{7}{9},\frac{8}{9}\right] \\
@@ -66,13 +66,13 @@ was Borel-measurable, also
 would be, contradiction. Therefore $A$ is Lebesque-measurable but not Borel-measurable.
 \vspace{.3cm} 
 \par On the other hand, the completion of Borel sigma algebra is easily seen to be Lebesque sigma algebra:
-\par Denote $\mathcal{B}$ Borel algebra, $\mathcal{L}$ Lebesque algebra, $\overline{\mathcal{B}}^\lambda$ the completion of $\mathcal{B}$ w.r.t. Lebesque measure $\lambda,$ $G_\delta$ to be set of countable intersections of open sets ("$G_\delta$" sets). Clearly $\overline{\mathcal{B}}^\lambda\subset \mathcal{L}.$ To prove the other inclusion, choose arbitrary $A\in \mathcal{L}.$ Then $\exists B\in G_\delta\colon A\subset B, \ \lambda(B\setminus A)=0,$ so
+\par Denote $\mathcal{B}$ Borel algebra, $\mathcal{L}$ Lebesque algebra, $\overline{\mathcal{B}}^\lambda$ the completion of $\mathcal{B}$ w.r.t. Lebesque measure $\lambda,$ $G_\delta$ to be set of countable intersections of open sets ("$G_\delta$" sets). Clearly $\overline{\mathcal{B}}^\lambda\subset \mathcal{L}.$ To prove the other inclusion, choose arbitrary $A\in \mathcal{L}.$ Then $\exists B\in G_\delta\: A\subset B, \ \lambda(B\setminus A)=0,$ so
 \begin{equation*}
 	A = \underbrace{B}_{\in \mathcal{B}}\setminus \underbrace{(B\setminus A)}_{\in \overline{\mathcal{B}}^\lambda, \text{ since } \lambda(B\setminus A)=0}\in \overline{\mathcal{B}}^\lambda
 \end{equation*}
 
 \subsection{Composition of Lebesque measurable functions is not Lebesque measurable}
-By definition, $f\colon \mathbb{R}\to \mathbb{R}$ is Lebesque measurable if it is measurable as a map $(\mathbb{R},\mathcal{L})\to (\mathbb{R}, \mathcal{B}).$ Let $\psi\colon [0,1]\to [0,2]$ be as in (\ref{cantor+x}), then since $[0,1]$ is compact $\psi^{-1}$ is also continuous (therefore Lebesque measurable). Denote $A\subset[0,1]$ a non-Borel set from (\ref{nonborel measurable set}), then since $\lambda(A)=0,\ \mathbb{1}_A\colon [0,1]\to \mathbb{R}$ is Lebesque measurable. But
+By definition, $f\: \mathbb{R}\to \mathbb{R}$ is Lebesque measurable if it is measurable as a map $(\mathbb{R},\mathcal{L})\to (\mathbb{R}, \mathcal{B}).$ Let $\psi\: [0,1]\to [0,2]$ be as in (\ref{cantor+x}), then since $[0,1]$ is compact $\psi^{-1}$ is also continuous (therefore Lebesque measurable). Denote $A\subset[0,1]$ a non-Borel set from (\ref{nonborel measurable set}), then since $\lambda(A)=0,\ \mathbb{1}_A\: [0,1]\to \mathbb{R}$ is Lebesque measurable. But
 \begin{equation*}
 	(\mathbb{1}_A\circ \psi^{-1})^{-1}(\{1\})=(\psi^{-1})^{-1}(A)=N
 \end{equation*}
@@ -150,7 +150,7 @@ Below we use pauli matrices
 
 The Hopf fibration is the map which sends spinors (elements of $S^3$) to the expectation values of spin in the $x,y,z$ directions:
 \begin{align*}
-	\langle \bullet | \vec{\sigma} | \bullet \rangle\colon S^3 &\to S^2 \\
+	\langle \bullet | \vec{\sigma} | \bullet \rangle\: S^3 &\to S^2 \\
 	\alpha\ua+\beta\da = \ket{\psi} &\mapsto \bra{\psi}\vec{\sigma}\ket{\psi} = 
 	\begin{pmatrix}
 \langle \sigma_x \rangle _{\psi} \\
@@ -170,7 +170,7 @@ The Hopf fibration is the map which sends spinors (elements of $S^3$) to the exp
 \end{pmatrix}
 \end{align*}
 
-Generally, given a smooth manifold $M$, a principal $U(1)$-bundle is a fiber bundle $p\colon E\to M$ with a group action $U(1)\times E \to E$ such that $\forall e\in E, g\in G:\ e\in p^{-1}(x) \Rightarrow  g\cdot e \in p^{-1}(x)$ and the action on each fiber is free and transitive. In our case $M=S^{2}.$
+Generally, given a smooth manifold $M$, a principal $U(1)$-bundle is a fiber bundle $p\: E\to M$ with a group action $U(1)\times E \to E$ such that $\forall e\in E, g\in G:\ e\in p^{-1}(x) \Rightarrow  g\cdot e \in p^{-1}(x)$ and the action on each fiber is free and transitive. In our case $M=S^{2}.$
 
 %TODO: ADD DIRAC BELT
 
@@ -183,12 +183,12 @@ $Unif$ is category of uniform spaces and uniformly cts functions, $CUnif_{T2}$ i
 \subsection{Homeomorphism doesn't preserve completeness}
 Completeness is not a topological invariant. The spaces $(0,1),\ \mathbb{R}$ with Euclidean topology are homeomorphic via
 \begin{equation*}
-  h\colon \mathbb{R} \to (0,1), \ \ h(x) = \frac{\tanh(x)+1}{2}
+  h\: \mathbb{R} \to (0,1), \ \ h(x) = \frac{\tanh(x)+1}{2}
 \end{equation*}
 $\mathbb{R}$ is complete, $(0,1)$ is not. 
 
-\subsection{Frechet space that is not normable}
-Consider $L^1_{loc}(\mathbb{R}^d)$ given the F topology generated by seminorms
+\subsection{Fréchet space that is not normable}
+Consider $L^1_{loc}(\mathbb{R}^d)$ given the Fréchet topology generated by seminorms
 \begin{equation*}
 	|f|_n = \int_{\nm{x}\leq n}|f(y)|dy
 \end{equation*}
@@ -206,18 +206,18 @@ define $\psi_n = \displaystyle\frac{\phi_{n,n}}{n|\phi_{n,n}|_n},$ then
 \begin{equation*}
   \forall l\in \mathbb{N}, n\geq l: |\psi_n|_l \leq |\psi_n|_n = \frac{1}{n} \to 0 \ \ \ \ n\to \infty
 \end{equation*}
-so $\psi_n \to 0$ in $L^1_{loc}$ but $\nm{\psi_n}>1,$ contradiction. Generally, for any Frechet space $X$ where the seminorms are nondecreasing, the inequalities (1) and (2) hold, so if we can find elements $x\in X$ such that $|x|_{N+1}$ can be arbitrarily large and $|x|_N$ arbitrarily small, the space is nor normable.
+so $\psi_n \to 0$ in $L^1_{loc}$ but $\nm{\psi_n}>1,$ contradiction. Generally, for any Fréchet space $X$ where the seminorms are nondecreasing, the inequalities (1) and (2) hold, so if we can find elements $x\in X$ such that $|x|_{N+1}$ can be arbitrarily large and $|x|_N$ arbitrarily small, the space is nor normable.
 \par For $C^\infty_0[0,1]$ where topology is generated by $|f|_n = \sup_{k\leq n}\nm{f^{(k)}}_\infty$, the element $f(x)=\frac{1}{n^N}\sin(nx)$ ($n$ large) has small $|\bullet|_{N-1}$ but large $|\bullet|_N.$
 
 \subsection{Banach space with no preduals}
-Suppose $X^{*}=L^1(0,1).$ Then by Banach-Alaoglu, $B_X = \{f\in L^1(0,1)\colon \nm{f}\leq 1\}$ is $w^{*}-compact$ convex, so by Krein-Milman $B_X=\overline{\text{aconv}}\ \text{ext } B_X$. But there are no extreme points of $B_X:$
+Suppose $X^{*}=L^1(0,1).$ Then by Banach-Alaoglu, $B_X = \{f\in L^1(0,1)\: \nm{f}\leq 1\}$ is $w^{*}$-compact and convex, so by Krein-Milman $B_X=\overline{\text{aconv}}\ \text{ext } B_X$. But there are no extreme points of $B_X:$
 \par Suppose $f\in B_X$ is extreme. Since $\int_0^x|f(t)|dt$ is continuous in $x$, 
 \begin{equation*}
 	\exists s\in (0,1): \int_0^s|f(t)|dt=\frac{\nm{f}_1}{2}
 \end{equation*}
 Now $g_1 := 2f\chi_{( 0,s )}, \ g_2 := 2f\chi_{(s,1)}$ satisfy $f=\displaystyle\frac{g_1+g_2}{2}, \  g_1,g_2\in B_X, \ g_1, g_2\neq f.$ 
 
-\subsection{Weak convergence $\neq$ weak$^*$ convergence}
+\subsection{Weak$^*$ convergence $\not \Rightarrow$ Weak convergence}
 Let $X=c_0, \ X^{*}=l^{1}, X^{**}=l^{\infty}.$ Then the Shauder basis
 \begin{equation*}
 	e_n = (0, 0, ..., 0, \underbrace{1}_{n\text{'th position}}, 0, ...)
@@ -229,8 +229,29 @@ satisfies
 \end{align*}
 So $e_n \stackrel{w^{*}}{\to} 0$ but $e_n\stackrel{w}{\not\to} 0.$
 
+\subsection{Almost everywhere convergence is not topological}
+It holds in any topological space $(X,\tau)$ and sequence $\{x_n\}_{n\in \mathbb{N}}\subset X$ it holds
+
+\begin{center}
+	\begin{tabular}{rl}
+		$x_n\stackrel{\tau}{\to}x \iff$ &For any subsequence $\{x_{n_k}\}_{k\in \mathbb{N}}$ of $\{x_n\},$ \\ &there is a subsequence $\{x_{n_{k_l}}\}_{l\in \mathbb{N}}$ such that $x_{n_{k_l}}\stackrel{\tau}{\to}x.$
+	\end{tabular}
+\end{center}
+Consider the Haar system
+\begin{align*}
+	\psi_{n,k}&:= \mathbb{1}_{\left[\textstyle\frac{k}{2^{n}},\textstyle\frac{k+1}{2^{n}}\right)}, \ \ 0\leq k\leq 2^{n}-1, \ \ n\in \mathbb{N}.\\
+	(\phi_l)_{l\in \mathbb{N}} &:= (\psi_{1,1},\ \psi_{2,1},\ \psi_{1,2},\ \psi_{2,2},\ \psi_{3,2},\ \psi_{4,2},\ \psi_{1,3},\ \ \hdots) \\
+\end{align*}
+Then $\phi \stackrel{a.e.}{\not\to} 0$, but for any subsequence of $\phi_n=\mathbb{1}_{I_n}$ we can choose a subsequence $\phi_{n_k}=\mathbb{1}_{I_{n_k}}$ such that
+$\sum_{k\in \mathbb{N}}|I_{n_k}|< \infty$, and therefore from Borel-Cantelli
+\begin{align*}
+	&\lambda_1(\lim\sup_{k\to \infty}I_{n_k})=0\\
+	\Rightarrow \ &\lambda_1(\{x\in [0,1]\: x \text{ lies only in finitely many of } I_{n_k}\})=1 \\
+	\Rightarrow \ &\phi_{n_k}\stackrel{a.e.}{\to} 0
+\end{align*}
+
 \subsection{Fourier series of continuous function does not converge}.
-Let for $f\colon [0,2\pi]\to \mathbb{R}$
+Let for $f\: [0,2\pi]\to \mathbb{R}$
 \begin{equation*}
 	S_Nf(x)=\sum_{-N}^Na_ne^{-inx} = \frac{1}{2\pi}\int_0^{2\pi}D_N(x-t)f(t)dt,
 \end{equation*}
@@ -246,7 +267,7 @@ It is well-known that
 \end{itemize}
 Fix $x\in [0,2\pi], N\in \mathbb{N}.$ Then define a signed Radon measure
 \begin{equation*}
-	\Phi_{x,N}\colon C[0,2\pi]\to \mathbb{R}, \ \ \ \Phi_{x,N}f = S_Nf(x)
+	\Phi_{x,N}\: C[0,2\pi]\to \mathbb{R}, \ \ \ \Phi_{x,N}f := S_Nf(x)
 \end{equation*}
 it's norm is
 \begin{equation*}
@@ -254,22 +275,18 @@ it's norm is
 \end{equation*}
 But
 \begin{equation*}
-  \frac{1}{2\pi}\int_0^{2\pi}|D_N(s)|dt \geq \frac{1}{2\pi}\int_0^{2\pi} \frac{\sin\left(\frac{2N+1}{2}s\right)}{\frac{s}{2}}ds \to \infty
+	\frac{1}{2\pi}\int_0^{2\pi}|D_N(s)|dt \geq \frac{1}{2\pi}\int_0^{2\pi} \frac{|\sin\left(\frac{2N+1}{2}s\right)|}{\frac{s}{2}}ds = \int_0^{(2N+1)\pi}\frac{|\sin x|}{x}dx \stackrel{N\to \infty}{\to} \int_0^{\infty}\frac{|\sin x|}{x}dx=\infty
 \end{equation*}
-Therefore $\{\Phi_{x,N}\}_{N\in \mathbb{N}}$ is not bounded in $(C[0,2\pi])^{*}.$ Using Uniform boundedness principle (and that $x$ was arbitrary) we get 
-\begin{equation}\label{fourier bad}
-	\forall x\in [0,2\pi] \ \exists f\in C[0,2\pi]\colon S_Nf(x) \ \text{ diverges as } \ N\to \infty 
-\end{equation}
-It gets worse. Denote $\mathcal{P}\subset L^{1}(0,2\pi)$ the set of trigonometric polynomials. Clearly, $\mathcal{P}$ is dense. Let $f$ be a function "bad" at $x$ from \eqref{fourier bad}. Then $\mathcal{P}+f:=\{p+f: \ p\in \mathcal{P}\}$ is also dense and all $p+f\in \mathcal{P}+f$ are "bad" at $x$ in the sense of \eqref{fourier bad}. Therefore
 
-\begin{equation*}
-	\forall x\in [0,2\pi] \ \exists \mathcal{D}\subset C[0,2\pi]\text{ dense such that }\forall f\in \mathcal{D}\colon S_Nf(x) \ \text{ diverges as } \ N\to \infty 
-\end{equation*}
+So $\{\Phi_{x,N}\}_{N\in \mathbb{N}}$ is not bounded in $(C[0,2\pi])^{*}.$ By Uniform Boundedness Principle we get 
+\begin{equation}
+	\forall x\in [0,2\pi] \ \exists \text{ dense set } \mathcal{A}\subset C[0,2\pi] \text{ such that } \forall f\in \mathcal{A}\: |S_Nf(x)|\stackrel{N\to\infty}{\to} \infty
+\end{equation}
 
 \subsection{Functional not attaining it's norm. Counterexample to projection theorem}
 Let $X=L^{1}(0,1),\ \phi\in X^{*}$ defined by $\langle\phi,f\rangle:= \int_0^1 xf(x)dx.$ We will show
 \begin{equation*}
-	\nexists f\in X\colon \nm{f}_X=1, \ |\langle \phi, f\rangle|=\nm{\phi}_{X^{*}}.
+	\nexists f\in X\: \nm{f}_X=1, \ |\langle \phi, f\rangle|=\nm{\phi}_{X^{*}}.
 \end{equation*}
 Clearly 
 \begin{equation*}
@@ -291,7 +308,7 @@ For contradiction, suppose there exist $f\in L^{1}(0,1)$ such that $\nm{f}_1=1$,
 \end{alignat*}
 Intuitively, any $f$ attaining the bound $|\langle \phi, f\rangle|=1$ would have to have all it's mass at $x=1,$ since if the mass is anywhere else, we can move it closer to $x=1$ to make $\langle \phi,f\rangle$ bigger. This is impossible on the level of $L^{1}$ functions. However, taking $\delta_1 \in (C[0,1])^{*}, \ \langle\delta_1,\varphi \rangle=\varphi(1),$ by Hahn-Banach
 \begin{equation*}
-	\nm{\delta_1}_{(C[0,1])^{*}}=1, \ C[0,1]<L^{\infty}(0,1) \Rightarrow \exists T\in (L^{\infty}(0,1))^{*}\colon T\rvert_{C[0,1]}=\delta_1, \ \nm{T}_{(L^{\infty}(0,1))^{*}}=1.
+	\nm{\delta_1}_{(C[0,1])^{*}}=1, \ C[0,1]<L^{\infty}(0,1) \Rightarrow \exists T\in (L^{\infty}(0,1))^{*}\: T\rvert_{C[0,1]}=\delta_1, \ \nm{T}_{(L^{\infty}(0,1))^{*}}=1.
 \end{equation*}
 And (equating $\phi\in (L^{1})^{*}$ with $x\in L^{\infty}$):
 \begin{equation*}
@@ -303,11 +320,11 @@ Therefore $\phi$ attains it's maximum on the unit ball of dual $(L^{\infty})^{*}
 \end{center}
 We say that a subspace $A\subset Y$ of Banach space is \textit{proximital}, if
 \begin{equation*}
-	\forall x\in Y \ \exists! a\in A\colon \nm{x-a}=\inf_{b\in A}\nm{x-b} \ \ \ \hdots a:=P_A(x)
+	\forall x\in Y \ \exists! a\in A\: \nm{x-a}=\inf_{b\in A}\nm{x-b} \ \ \ \hdots a:=P_A(x)
 \end{equation*}
-by the Projection theorem, every nonempty closed convex subset of a Hilbert space is proximital. We show that in $X=L^{1}$, $V:=\{f\in L^{1}(0,1)\colon \langle \phi, f\rangle=1\}$ is not proximital, even though it is a closed convex subset. We wish to project $0\in L^{1}$ to $V.$ Clearly
+by the Projection theorem, every nonempty closed convex subset of a Hilbert space is proximital. We show that in $X=L^{1}$, $V:=\{f\in L^{1}(0,1)\: \langle \phi, f\rangle=1\}$ is not proximital, even though it is a closed convex subset. We wish to project $0\in L^{1}$ to $V.$ Clearly
 \begin{equation*}
-	\forall \epsilon>0\ \exists f_\epsilon\in L^{1}\colon \nm{f_\epsilon}_{L^{1}}\leq 1+\epsilon , \ \langle \phi, f_\epsilon\rangle=1 \ \ \ \&\ \ \ \forall f\in L^{1}\colon \langle \phi, f\rangle=1 \Rightarrow \nm{f}_{L^{1}}\geq 1
+	\forall \epsilon>0\ \exists f_\epsilon\in L^{1}\: \nm{f_\epsilon}_{L^{1}}\leq 1+\epsilon , \ \langle \phi, f_\epsilon\rangle=1 \ \ \ \&\ \ \ \forall f\in L^{1}\: \langle \phi, f\rangle=1 \Rightarrow \nm{f}_{L^{1}}\geq 1
 \end{equation*}
 \begin{equation*}
 	\Rightarrow  \inf_{f\in V}\nm{0-f} = \inf_{f\in V}\nm{f} = 1
@@ -317,296 +334,5 @@ But we know that this bound cannot be attained, so the projection does not exist
 	f= P_V(0)\ \Rightarrow \ \nm{f}_{L^{1}}=1\ \ \& \ \ f\in V, \ \ \ \text{a contradiction.}
 \end{equation*}
 
-\subsection{Vitali covering lemma}
-\par \textbf{Tvrzení (Vitaliho pokrývací lemma, konečná verze).} Z každého konečného souboru koulí $B_1, ..., B_n$ v $M$ lze vybrat soubor po dvou disjunktních koulí $B_{i_1}, B_{i_2}, ..., B{i_k}$ tak, aby platilo
-\begin{equation*}
-3B_{i_1}\cup 3B_{i_2} \cup ... \cup 3B_{i_k} \supset B_1 \cup B_2 \cup ... \cup B_n
-\end{equation*}
-
-\vspace*{.5cm}
-
-\par \textbf{Tvrzení (Vitaliho pokrývací lemma, nekonečná verze).} Nechť $c>1$. Z každého souboru koulí $(B_i)_{i\in I}$ v $M$ splňujícího 
-\begin{equation*}
-    R := \sup_{i\in I} rad(B_i) < \infty 
-\end{equation*}
-lze vybrat soubor po dvou disjunktních koulí $(B_j)_{j\in J}, J\subset I$ tak, aby platilo
-\begin{equation*}
-    \forall i\in I \ \exists j\in J: B_i \cap B_j = \emptyset, (1+2c)B_j \supset B_i
-\end{equation*}
-Z toho pak plyne
-\begin{equation*}
-\bigcup_{j\in J}(1+2c)B_j \supset \bigcup_{i\in I}B_i
-\end{equation*}
-Pokud je $M$ separabilní, musí být systém $(B_j)_{j\in J}$ spočetný.
-
-\par \textit{Důkaz (konečná verze):} Indukcí. Pro $n=1$ je tvrzení zřejmé. Předpokládejme, že platí pro $n$ a nechť $B_1, ..., B_n, B_{n+1}$ je soubor koulí. Vyberme index $p\in \{1,...,n+1\}$ tak, že $B_p$ má mezi koulemi nejmenší poloměr. Bez této koule zbývá $n$ koulí $B_1, ..., B_{p-1}, B_{p+1}, ..., B_{n+1}$ a pro ně z indukčního předpokladu existují indexy $i_1, ..., i_k$ tak, že 
-\begin{equation*}
-3B_{i_1}\cup 3B_{i_2} \cup ... \cup 3B_{i_k} \supset B_1 \cup ... \cup B_{p-1} \cup B_{p+1} \cup ... \cup B_{n+1}
-\end{equation*}
-\begin{itemize}
-    \item Pokud $3B_{i_1}\cup 3B_{i_2} \cup ... \cup 3B_{i_k}$ pokrývá i kouli $B_p,$ máme hotovo.
-    \item Jinak platí
-\begin{equation*}
-    B_p \setminus (3B_{i_1}\cup 3B_{i_2} \cup ... \cup 3B_{i_k}) \neq \emptyset
-\end{equation*}
-Vyberme tedy nějaký bod $x_0 \in B_p \setminus (3B_{i_1}\cup 3B_{i_2} \cup ... \cup 3B_{i_k}),$ který jsme nepokryli. Jinak řečeno (označme $S_j$ střed koule $B_{i_j}$),
-\begin{equation*}
-    d(x_0, S_j) > 3rad(B_{i_j}) \ \ \forall j\in\{1,2,...,k\}
-\end{equation*}
-Bod $x_0$ je tedy dost daleko od všech koulí, aby byla $B_p$ disjunktní s ostatními koulemi: platí totiž
-\begin{equation*}
-    d(S_p, S_j) \geq d(x_0,S_j)-d(x_0, S_p) > 3rad(B_{i_j})-rad(B_p)>2rad(B_{i,j})>rad(B_{i_j})+rad(B_p) 
-\end{equation*}
-Pokud je vzdálenost středů koulí větší než součet poloměrů, koule se neprotínají, máme tedy $B_p\cap B_{i_j} = \emptyset \ \ \forall j\in \{1,...,k\}.$ Proto jsou koule
-\begin{equation*}
-    B_p, B_{i_1}, ..., B_{i_k}
-\end{equation*}
-po dvou disjunktní. Vlastnost
-\begin{equation*}
-3B_p \cup 3B_{i_1}\cup 3B_{i_2} \cup ... \cup 3B_{i_k} \supset B_1 \cup ... \cup B_{n+1}
-\end{equation*}
-plyne z indukčního předpokladu a triviálního odhadu $3B_p \supset B_p. \ \ \Box$
-\end{itemize}
-
-\par \textit{Důkaz (nekonečná verze):} Rozdělme $I$ na množiny $I_0, I_1, ...$ podle velikosti koulí:
-\begin{equation*}
-    I_n := \{i\in I: \ rad(B_i) \in (c^{-n-1}R,c^{-n}R]\}
-\end{equation*}
-Definujeme posloupnosti $K_n, J_n$ splňující $J_n \subset K_n\subset I_n$ následovně: 
-\begin{itemize}
-    \item $K_0 := I_0,$ $J_0\subset K_0$ je maximální soubor po dvou disjunktních koulí (říkáme, že koule $B$ patří do $J_0,$ pokud $B=B_j, j\in J_0.$) 
-    \item Pokud $J_0, J_1, ..., J_n$ byly vybrány, nechť
-    \begin{align*}
-        K_{n+1} &:= \{i\in I_{n+1}: \ \ B_i \cap B_j = \emptyset \ \forall j\in J_0\cup J_1 \cup ... \cup J_n\} \\
-        J_{n+1} &\text{ je nějaký maximální soubor po dvou disjunktních koulí v } H_{n+1} \\
-        J &:= \bigcup_{n=0}^\infty J_n.
-    \end{align*}
-\end{itemize}
-Pak $J$ je soubor disjunktních koulí. Pokud je $M$ separabilní, každý soubor disjunktních koulí musí být spočetný. Zbývá ukázat
-    \begin{equation*}
-    \forall i\in I \ \exists j\in J: B_i \cap B_j = \emptyset, (1+2c)B_j \supset B_i
-    \end{equation*}
-    Zvolme $i\in I.$ Pak $i \in I_n$ pro nějaké $n>0.$ 
-    \begin{itemize}
-        \item Pokud $i\notin K_{n},$ platí $B_i\cap C \neq \emptyset$ pro nějaké $C\in J_0\cup ... \cup J_{n-1}$
-        \item Pokud $i\in K_{n},$ je buď $B_i \in J_n,$ nebo $\{B_i\}\cup J_n$ není po dvou disjunktní.
-    \end{itemize}
-    Ve všech případech tedy $\exists C\in J_0\cup ... \cup J_{n-1}\cup J_n: \ B_i\cap C \neq \emptyset.$ Z definice $I_n$ máme $rad(B_i) < c^{-n}, rad(C) > c^{-n-1},$ tedy $rad(B_i)<c\cdot rad(C).$ Chceme ukázat $(1+2c)C \supset B_i,$ neboli ($x_i$ je střed koule $B_i,$ $x_C$ je střed koule $C$)
-    \begin{equation*}
-        \rho(x,x_i) < rad(B_i) \Rightarrow \rho(x,x_C) < (1+2c)rad(C)
-    \end{equation*}
-    to vyplývá z výpočtu
-    \begin{equation*}
-        \rho(x,x_C)\leq \rho(x,x_i)+\rho(x_i,x_C) < rad(B_i) + (rad(B_i)+rad(C)) < (1+2c)rad(C)
-    \end{equation*}
-
-\subsection{Stokes}
-
-Ponoříme kouli K o poloměru R do kapaliny s rychlostí $v$, viskozitou $\eta$, chceme spočíst odporovou sílu F. Nechť $\vec{w}$ je pole rychlosti kapaliny okolo koule.
-Řešíme:
-\begin{align*}
-    \div \vec{w} &= 0 \\
-    -\nabla p + \eta \Delta \vec{w} &= 0 \\
-    \vec{w}|_{\partial K} &= 0 \\
-    \vec{w} \rightarrow \vec{v} &\text{ v nekonečnu } \\
-\end{align*}
-Z tlaku a rychlosti se pak spočítá síla F:
-\begin{equation*}
-    \mathbb{T} = -p\mathds{1} + \eta(\nabla\vec{w}+\nabla\vec{w}^T) \rightarrow F = \frac{\vec{v}}{v}\cdot\int_{\partial K}\vec{n}\cdot\mathbb{T} dS\\ 
-\end{equation*}
-\textbf{KROK 1: proudová funkce}
-\begin{align*}
-    h_r &= 1, \ h_{\theta}=r, h_{\varphi}=r\sin\theta \\
-    \div \vec{w}&=\frac{1}{h_rh_{\varphi} h_\theta}\left[\left(\frac{h_{\varphi}h_\theta}{h_r}w_r\right)_{,r} +\left(\frac{h_{r}h_\varphi}{h_{\theta}}w_{\theta}\right)_{,\theta} \right]= \\
-    \div \vec{w}&=\frac{1}{r^2\sin\theta}\left[\left(r^2\sin\theta w_r\right)_{,r} +\left(r\sin\theta w_{\theta}\right)_{,\theta} \right]= 0 \\
-		&\sin\theta(r^2w_r)_{,r} = -r(\sin\theta w_\theta)_{,\theta} \\
-		&\sin\theta\left(r^2\frac{1}{r^2\sin\theta }\psi_{,\theta}\right)_{,r} = -r\left(\sin\theta \frac{-1}{r\sin\theta}\psi_{,r}\right)_{,\theta}   ...   \psi_{,\theta r} = \psi_{,r \theta}
-\end{align*}
-s ansatzem $w_r = \frac{1}{r^2\sin\theta }\psi_{,\theta}, w_{\theta} = \frac{-1}{r\sin\theta}\psi_{,r},$ kde $\psi$ je nějaká funkce (proudová funkce), bude automaticky platit $\div\vec{w}=0.$ Protože 
-\begin{equation*}
-\Delta \vec{w}=\nabla\div\vec{w}-\rot(\rot\vec{w})=-\rot(\rot \vec{w}),
-\end{equation*}
-řešíme rovnici 
-\begin{equation*}
-    -\rot(\rot \vec{w}) = \nabla p
-\end{equation*}
-\begin{align*}
-    (\rot \vec{w})_r = \frac{-1}{h_\theta h_\varphi}\left((h_\theta w_\theta)_{,\varphi} - (h_\varphi w_\varphi)_{,\theta}\right) &= 0 = ... = (\rot \vec{w})_\theta\\
-    (\rot \vec{w})_{,\varphi} = \frac{-1}{h_\theta h_r}\left((h_\theta w_\theta)_{,r} - (h_r w_r)_{,\theta}\right) &= \frac{-1}{r\sin\theta}Q\psi 
-\end{align*}
-kde 
-\begin{equation*}
-    Q := \frac{\partial^2}{\partial r^2} + \frac{\sin\theta}{r^2}\frac{\partial}{\partial\theta}\left(\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\right)
-\end{equation*}    
-\begin{align*}
-    (\rot (\rot \vec{w}))_r &= \frac{1}{h_{\theta}h_{\varphi}}\left(h_\varphi(\rot \vec{w})_\varphi)\right)_{,\theta} = \frac{-1}{r^2\sin\theta}(Q\psi)_{,\theta} \\
-    (\rot (\rot \vec{w}))_\theta &= \frac{1}{h_{\theta}h_{\varphi}}\left(-h_\varphi(\rot \vec{w})_\varphi)\right)_{,r} = \frac{1}{r\sin\theta}(Q\psi)_{,r} \\
-    (\nabla p)_r &= \frac{1}{h_r}\frac{\partial p}{\partial r}=\frac{\partial p}{\partial r}, \ \ \ (\nabla p)_\theta = \frac{1}{h_\theta}\frac{\partial p}{\partial \theta} = \frac{1}{r}\frac{\partial p}{\partial \theta}
-\end{align*}
-rovnice $-\rot(\rot \vec{w}) = \nabla p$ tedy přechází na
-\begin{equation*}
-    \frac{\partial p}{\partial r} = \frac{\eta}{r^2\sin\theta}(Q\psi)_{,\theta}, \ \ \ \frac{\partial p}{\partial \theta} = -\frac{\eta}{\sin\theta}(Q\psi)_{,r}
-\end{equation*}
-Rovnici pro $\psi$ dostaneme zderivováním první rovnice podle $\theta$ a druhé podle $r$:
-\begin{equation*}
-    0 = p_{,r\theta}-p_{,\theta r} = \frac{\eta}{\sin\theta}Q^2 \psi \Rightarrow Q^2\psi = 0
-\end{equation*}
-\textbf{KROK 2: řešení rovnice pro $\psi$} \\
-Předpokládáme tvar $\psi(r, \theta)=f(r)\sin^2\theta$
-\begin{equation*}
-    Q\psi = \sin^2\theta \left(f''-\frac{2f}{r^2}\right), \ \ f' := \frac{df}{dr}
-\end{equation*}
-$Q^2\psi=0$ tedy přejde na
-\begin{align*}
-    \left(f''-\frac{2f}{r^2}\right)''-\frac{2}{r^2}\left(f''-\frac{2f}{r^2}\right) &= 0 \\
-    r^4f^{(4)}-4r^2f''+8rf'-8f &= 0 
-\end{align*}
-tato Eulerova rovnice se řeší ansatzem $f(r)=r^n.$ Pro ten platí $r^kf^{(k)}(r)=n(n-1)...(n-k+1)r^n:$
-\begin{align*}
-    n(n-1)(n-2)(n-3)-4n(n-1)+8n-8 &= 0 \\
-    n^4-6n^3-7n^2-6n-8 &=0 \\
-    (n+1)(n-1)(n-2)(n-4) &= 0 \\
-    f(r) &= \frac{A}{r} + Br + Cr^2 + Dr^4 
-\end{align*}
-
-proudová funkce a složky rychlosti jsou pak
-\begin{align*}
-    \psi(r, \theta) &= \sin^2\theta\left(\frac{A}{r} + Br + Cr^2 + Dr^4\right) \\ 
-    w_r &= \frac{1}{r^2\sin\theta }\psi_{,\theta} = 2\cos\theta(Ar^{-3}+Br^{-1}+C+Dr^2) \\
-    w_{\theta} &= \frac{-1}{r\sin\theta}\psi_{,r} = \sin\theta(Ar^{-3}-Br^{-1}-2C-4Dr^2)
-\end{align*}
-
-Protože v limitě $\vec{w}\to\vec{v}$, $w_r \to v\cos\theta, w_\theta\to -v\sin\theta$,
-\begin{equation*}
-	C = \frac{1}{2}v, \ \ \ D=0
-\end{equation*}
-a z podmínky $\vec{w}|_{\partial K}=0$ plyne
-\begin{align*}
-	AR^{-3}+BR^{-1}+\frac{1}{2}v &= 0 \\
-	AR^{-3}-BR^{-1}-v &= 0 \\
-	\Rightarrow A&=\frac{1}{4}R^3v, \ \ B=\frac{-3}{4}Rv
-\end{align*}
-\begin{align*}
-	w_r &= \cos\theta\left(\frac{R^3}{2r^3}-\frac{3R}{2r}+1\right)v \\
-	w_\theta &= \sin\theta\left(\frac{R^3}{4r^3}+\frac{3R}{4r}-1\right)v
-\end{align*}
-
-\textbf{KROK 3: Tlak}
-\par Tlak získáme integrací rovnic:
-\begin{align*}
-    \frac{\partial p}{\partial r} = \frac{\eta}{r^2\sin\theta}(Q\psi)_{,\theta} = 
-\end{align*}
-%TODO: DODELAT
-
-\subsection{Kuzel}
-
-\subsubsection*{2: Limita $n-$bokého pravidelného jehlanu}
-
-\begin{itemize}
-    \item 1. Spočítáme obsah $T_n$ jednoho trojúhelníčku v pravidelném $n$-bokém jehlanu o poloměru $R,$ výšce $H$
-    \item 2. Obsah pláště kužele bude $\displaystyle\lim_{n\to \infty} n\cdot T_n$
-\end{itemize}
-\par \textbf{KROK 1: $T_n$} 
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=.5]{./images/kuzel4.png}
-    \label{nevim?}
-\end{figure}
-Trojúhelníček má stranu $d$ v podstavě válce. Když si domyslíme kruh o poloměru $R,$ do kterého je vepsaný pravidelný $n$-úhelník (=podstava jehlanu), úsečka $d$ je sečna tohoto kruhu a odpovídá jí úhel $\alpha.$ Takových úseček se tam má vlézt $n$, proto $\alpha = \frac{2\pi}{n}.$ Z trojúhelníčku $R,l,\frac{d}{2}$ máme
-\begin{equation*}
-    d = 2R\cdot \sin\frac{\alpha}{2}, \ \ \ l=R\cdot \cos\frac{\alpha}{2}
-\end{equation*}
-(sinus = protilehlá ku přeponě, koninus = přilehlá ku přeponě).
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=.5]{./images/kuzel5.png}
-    \label{fig:enter-label}
-\end{figure}
-Základna trojúhelníku je $d,$ výška $\sqrt{H^2+l^2}.$ Obsah je tedy
-\begin{align*}
-    T_n &= \frac{1}{2}\cdot d \cdot \sqrt{H^2+l^2} = R\cdot\sin\frac{\alpha}{2}\cdot  \displaystyle\sqrt{H^2+R^2\cdot\cos^2\frac{\alpha}{2}} \\
-    &= R\cdot \sin\frac{\pi}{n}\cdot \displaystyle\sqrt{H^2+R^2\cdot \cos^2\frac{\pi}{n}}
-\end{align*}
-
-\vspace{1cm}
-\par \textbf{KROK 2:} 
-\begin{equation*}
-    S = \lim_{n\to \infty} n\cdot T_n = \lim_{n\to \infty} n\cdot R\cdot \sin\frac{\pi}{n}\cdot \displaystyle\sqrt{H^2+R^2\cdot \cos^2\frac{\pi}{n}} = ... = \pi R \sqrt{H^2+R^2}
-\end{equation*}
-
-\subsubsection*{3: \uv{normálová derivace objemu}}
-\par \textbf{Domněnka (neověřená):} Pokud povrch tělesa rozšíříme o stejné $\Delta d$ všude ve směru normály (=kolmici k ploše), nové \uv{nafouklé} těleso bude mít objem o 
-\begin{equation*}
-    \Delta V = S\cdot \Delta d + o(\Delta d)
-\end{equation*}
-větší, kde $S$ byl původní povrch tělesa. Tedy $S = \displaystyle\lim_{\Delta d \to 0} \frac{\Delta V}{\Delta d}.$
-
-\vspace{.5cm}
-\par \textbf{Poznámka:} \uv{o} notace tady znamená, že $o(\Delta d)$ je nějaká funkce splňující
-\begin{equation*}
-    \lim_{\Delta d \to 0}\frac{o(\Delta d)}{\Delta d} = 0.
-\end{equation*}
-Typicky se tam může objevit $(\Delta d)^2, (\Delta d)^3$ atd.
-
-\vspace{.5cm}
-\textbf{Příklad: Koule.} Objem koule o poloměru $R$ je $\frac{4}{3}\pi R^3.$ Když zvětšíme poloměr z $R$ na $R+\Delta R,$ je to přesně případ popsaný v domněnce (nafoukli jsme kouli všude ve směru normály, tj. směrem od středu, a všude o stejné $\Delta R.$) Nový objem je
-\begin{align*}
-    \frac{4}{3}\pi (R+\Delta R)^3 &= \frac{4}{3}\pi (R^3 + 3R^2\cdot \Delta R + 3R\cdot (\Delta R)^2 + (\Delta R)^3) \\
-    &= \frac{4}{3}\pi (R^3 + 3R^2\cdot \Delta R + o(\Delta R)) = \frac{4}{3}\pi R^3 + 4\pi R^2 \Delta R + o(\Delta R)
-\end{align*}
-Změna objemu je tedy až na zanedbatelný člen $4\pi R^2 \Delta R,$ což souhlasí s tím, že povrch koule je $4\pi R^2.$ Jednoduše na toto dojdeme, pokud si spočítáme
-\begin{equation*}
-    \frac{d}{dR}\left(\frac{4}{3}\pi R^3 \right) = 4\pi R^2.
-\end{equation*}
-\par \textbf{Strategie pro kužel:} 
-\begin{itemize}
-    \item Objem kužele je $\frac{1}{3}\pi R^2 H.$
-    \item Podstavu kužele zvětšíme o $\Delta R,$ výšku o $\Delta H$ tak, aby měl kužel \uv{stejný tvar}, tj. aby odpovídající povrchové přímky byly rovnoběžné. To zaručí, že kolmá vzdálenost ploch (to je naše $\Delta d$ v domněnce) je všude stejná. Tuto vzdálenost musíme samozřejmě spočítat.
-    \item Vyjádříme $\Delta H, \Delta d$ pomocí $\Delta R,$ a výsledek bude $S=\lim_{\Delta R \to 0} \frac{\Delta V}{\Delta d}$ (stejný, jako kdybychom počítali derivaci. Takto je ovšem výpočet příjemnější a vyhneme se nešikovnému zápisu $S=\frac{dV}{dd}.$)
-\end{itemize}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=.5]{./images/kuzel6.png}
-    \label{fig:enter-label}
-\end{figure}
-
-Aby měly kužel stejný tvar, musí platit
-\begin{equation*}
-    \frac{H+\Delta H}{R+\Delta R} = \frac{H}{R} \ \Rightarrow \ \Delta H = \frac{H}{R}\Delta R
-\end{equation*}
-Protože se $\Delta R, \Delta H$ liší jen o multiplikativní konstantu, platí $o(\Delta R) = o(\Delta H).$ Ve výpočtu změny objemu budeme tyto zanedbatelné členy rovnou psát společně jako $o(\Delta R).$ Jedná se o členy typu $(\Delta R)^2, (\Delta R)^2 \cdot \Delta H, (\Delta H)^2$ (vše, kde je \uv{víc než jedna delta.})
-
-\begin{align*}
-    \Delta V &= \frac{1}{3}\pi (R+\Delta R)^2(H+\Delta H) - \frac{1}{3}\pi R^2\cdot H \\
-    &= \frac{1}{3} \pi (R^2+2R\cdot \Delta R)(H+\Delta H) - \frac{1}{3}\pi R^2 \cdot H + o(\Delta R) \\
-    &= \frac{1}{3} \pi (R^2\cdot H+2R\cdot \Delta R \cdot H + R^2\cdot \Delta H) - \frac{1}{3}\pi R^2 \cdot H + o(\Delta R) \\
-    &= \frac{1}{3} \pi (2R\cdot \Delta R \cdot H + R^2\cdot \Delta H) + o(\Delta R) \\
-    &= \frac{1}{3} \pi (3\Delta R \cdot H) + o(\Delta R) = \pi \cdot H \cdot \Delta R + o(\Delta R)
-\end{align*}
-Z předposledního na poslední řádek jsem využil vztah mezi $\Delta H, \Delta R.$ 
-
-\vspace{.5cm}
-\par Ještě zbývá spočítat $\Delta d.$ Vidíme, že normálový vektor o délce $\Delta d$ s podstavou kuželu svírá úhel $\alpha,$ tedy stejný úhel jako svírají povrchové přímky pláště s osou (k tomu dospějeme přes úhel $\frac{\pi}{2}-\alpha$ na obrázku, součet ostrých úhlů v pravoúhlém trojúhelníku je $\frac{\pi}{2}$ a součet tří úhlů tvořících přímý úhel je $\pi.$) Využitím podobnosti trojúhelníků:
-\begin{equation*}
-    \Delta d = \Delta R \cdot \cos\alpha = \Delta R \cdot \frac{H}{\sqrt{R^2+H^2}}
-\end{equation*}
-Konečně tedy
-\begin{equation*}
-    S = \lim_{\Delta R \to 0} \frac{\Delta V}{\Delta d} = \lim_{\Delta R\to 0} \frac{\pi \cdot H \cdot \Delta R + o(\Delta R)}{\Delta R \cdot \frac{H}{\sqrt{R^2+H^2}}} = \pi R \sqrt{R^2+H^2}
-\end{equation*}
-\vspace*{1cm}
-
-\par \textbf{Poznámka:} Z obrázku se může zdát, že jsme zanedbali nově vzniklou plochu u podstavy a \uv{v čepičce}. 
-\vspace{1cm}
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=.5]{./images/kuzel7.png}
-    \label{nevim!}
-\end{figure}
-Jde ale vidět, že zanedbané části jsou řádově $\Delta d \cdot \Delta H,$ resp. $\Delta d \cdot \Delta R,$ tedy typu $o(\Delta R)$ a konečný výsledek neovlivní.
-
-%TODO: DODELAT NEBO SMAZAT?
 \end{document}
 

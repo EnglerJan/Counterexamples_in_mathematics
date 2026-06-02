@@ -5,11 +5,9 @@
 \contentsline {subsection}{\numberline {1.4}Hopf fibration, dirac belt}{3}{}%
 \contentsline {subsection}{\numberline {1.5}Examples of adjunctions}{4}{}%
 \contentsline {subsection}{\numberline {1.6}Homeomorphism doesn't preserve completeness}{4}{}%
-\contentsline {subsection}{\numberline {1.7}Frechet space that is not normable}{4}{}%
+\contentsline {subsection}{\numberline {1.7}Fréchet space that is not normable}{4}{}%
 \contentsline {subsection}{\numberline {1.8}Banach space with no preduals}{5}{}%
-\contentsline {subsection}{\numberline {1.9}Weak convergence $\neq $ weak$^*$ convergence}{5}{}%
-\contentsline {subsection}{\numberline {1.10}Fourier series of continuous function does not converge}{5}{}%
-\contentsline {subsection}{\numberline {1.11}Functional not attaining it's norm. Counterexample to projection theorem}{6}{}%
-\contentsline {subsection}{\numberline {1.12}Vitali covering lemma}{7}{}%
-\contentsline {subsection}{\numberline {1.13}Stokes}{8}{}%
-\contentsline {subsection}{\numberline {1.14}Kuzel}{10}{}%
+\contentsline {subsection}{\numberline {1.9}Weak$^*$ convergence $\not \Rightarrow $ Weak convergence}{5}{}%
+\contentsline {subsection}{\numberline {1.10}Almost everywhere convergence is not topological}{5}{}%
+\contentsline {subsection}{\numberline {1.11}Fourier series of continuous function does not converge}{6}{}%
+\contentsline {subsection}{\numberline {1.12}Functional not attaining it's norm. Counterexample to projection theorem}{6}{}%
