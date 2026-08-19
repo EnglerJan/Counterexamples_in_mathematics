@@ -10,6 +10,7 @@
 \usepackage{geometry}
 \usepackage{braket}
 \usepackage{bbold}
+\usepackage{mathtools} %xhookrightarrows
 
 \geometry{
 	top=0.6in, % Top margin
@@ -235,8 +236,8 @@ By Hahn-Mazurkiewicz theorem, a $T_2$ space $X$ is a continuous image of $[0,1]$
 \end{equation*}
 
 
-\subsection{Sobolev function with dense set of singularities}
-Let $\Omega\subset \mathbb{R}^N$ be bounded, $\{x_n\}_{n\in \mathbb{N}}$ be dense set in $\Omega,$
+\subsection{When do sobolev function have singularities?}
+Let $\Omega\subset \mathbb{R}^N$ be bounded Lipschitz, $\{x_n\}_{n\in \mathbb{N}}$ be a dense set in $\Omega,$
 \begin{equation*}
 	f(x):= \sum_{n\in \mathbb{N}}\frac{2^{-n}}{|x-x_n|^\mu}
 \end{equation*}
@@ -244,8 +245,13 @@ Since
 \begin{equation*}
 	\int_{B_1}\left(\nabla^k \frac{1}{|x-x_n|^\mu}\right)^p \cong \int_0^1 \left(\frac{1}{r^{\mu+k}}\right)^pr^{N-1}dr < \infty \iff -(\mu+k)p+N-1>-1 \iff \mu<\frac{N}{p}-k
 \end{equation*}
-It holds by choosing $\mu>0$ small enough that there exist functions in $W^{k,p}(\Omega)$ having dense set of singularities whenever $kp<N$. In particular, $W^{N-1,1}(\Omega)$ and $W^{1,N-1}(\Omega)$ have such functions. However it is well-known that any function in $W^{N,1}(\Omega)$ are continuous and any function in $W^{1,N+\epsilon}(\Omega)$ are Hölder continuous.
-\par $W^{1,N}(\Omega)$ functions can have logarithmic singularities, consider for instance
+It holds by choosing $\mu>0$ small enough that there exist functions in $W^{k,p}(\Omega)$ having dense set of singularities whenever $kp<N$.
+If $kp>N$, it holds
+\begin{equation*}
+W^{k,p}(\Omega)\xhookrightarrow{}W^{k-1,\frac{Np}{N-p}}(\Omega)\xhookrightarrow{}W^{k-2,\frac{Np}{N-2p}}(\Omega)\xhookrightarrow{}W^{1,\frac{Np}{N-(k-1)p}}(\Omega)\xhookrightarrow{}C^{0,\frac{kp-N}{N-(k-1)p}}(\overline{\Omega})
+\end{equation*}
+whenever $0<k-\frac{N}{p}\leq 1,$ and likewise for $n<k-\frac{N}{p}\leq n+1, n\geq 1$ we have $W^{k,p}(\Omega)\xhookrightarrow{}C^{n,\mu}(\overline{\Omega})$ for some $0<\mu<1.$ 
+\par The case $kp=N$ is interesting, for example it is well-known that any function in $W^{N,1}(\Omega)$ are continuous while functions in $W^{1,N}(\Omega)$ can have logarithmic singularities, consider for instance
 \begin{equation*}
 	f(x)=\ln \left(\ln \left(1+\frac{1}{|x|}\right)\right)\in W^{1,N}(B_1)\setminus L^\infty(\Omega),\ N\geq 2.
 \end{equation*}

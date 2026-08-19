@@ -63,6 +63,12 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/braket/braket.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/braket/braket.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/bbold/bbold.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/bbold/bbold.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT ./main.aux

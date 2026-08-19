@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1787095726.95056 "main.tex" "main.pdf" "main" 1787095727.30129 0
+["pdflatex"] 1787099063.68001 "main.tex" "main.pdf" "main" 1787099063.988 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -79,14 +79,17 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty" 1748806692 4023 e66acf578d6b564c4670fb57ff336a7a ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1761248321 30662 bfd6e864f4ffc5018b0e2b6260c3181c ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1279039959 678 4792914a8f45be57bb98413425e4c7af ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mathtools.sty" 1728349409 62711 3b0ed1d68b598a75677c10d16646d5e5 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty" 1616101747 5582 a43dedf8e5ec418356f1e9dfe5d29fc3 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty" 1748806692 10374 2ffd4f27c7f90b8a300608069537743c ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty" 1727642399 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1778433177 5541377 824b1e5beafd2ebda40585373b35bb6b ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1778440916 3636387 5108e4c54238e7bfa0a2551b5878a543 ""
   "/usr/local/texlive/2025/texmf.cnf" 1749856182.59286 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "main.aux" 1787095727.26451 2777 da4ffa2a67b2f8c07a88c0106f0e6f1c "pdflatex"
-  "main.tex" 1787095726.81152 22354 758c8576c871f55cf280bd152560be3c ""
-  "main.toc" 1787095727.26551 1808 923461ee22a51c128b3ee181cb39e8f7 "pdflatex"
+  "main.aux" 1787099063.95449 2773 ddb82e50d7adf5b92c84da4d31259a46 "pdflatex"
+  "main.tex" 1787099062.95656 22758 47a0d5a8e767ceeb7b30c2ee13c99358 ""
+  "main.toc" 1787099063.95449 1804 122ded4c6cf5446a4081ae51f98eb1ea "pdflatex"
   (generated)
   "main.aux"
   "main.log"
